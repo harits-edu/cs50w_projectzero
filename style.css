@@ -1,7 +1,8 @@
+/* Aturan dasar untuk menghilangkan margin/padding dan mengatur tinggi halaman */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* atau 100vh */
+    height: 100%;
 }
 
 body {
@@ -13,21 +14,23 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Penataan header (pojok kanan atas) */
 .header__links {
-    font-size: 14px;
     position: absolute;
     top: 30px;
     right: 30px;
     display: flex;
-    gap: 20px; /* memberi jarak antar link */
-    justify-content: center;
+    gap: 20px;
 }
 
-.header__links a{
-    color: black;
+/* Gaya untuk tautan di header */
+.header__links a {
     text-decoration: none;
+    color: black;
+    font-size: 14px;
 }
 
+/* Efek hover pada tautan */
 .header__links a:hover {
     text-decoration: underline;
 }
@@ -46,20 +49,37 @@ form {
     text-align: center;
 }
 
-input[type="text"] {
+/* Wadah untuk search bar dan ikon */
+.search-container {
+    position: relative;
     width: 500px;
+    display: inline-block; /* Agar posisi tetap di tengah form */
+}
+
+/* Gaya untuk input teks pencarian */
+.search-container input[type="text"] {
+    width: 100%; /* Mengisi lebar wadah */
     padding: 12px 20px;
+    padding-left: 40px; /* Jarak untuk ikon */
     border: 1px solid #dcdcdc;
     border-radius: 24px;
     outline: none;
     font-size: 16px;
     box-shadow: 0 1px 6px rgba(32,33,36,0.28);
-
 }
 
-input[type="text"]:focus {
+.search-container input[type="text"]:focus {
     border-color: #4285f4;
     box-shadow: 0 1px 6px rgba(66, 133, 244, 0.5);
+}
+
+/* Posisi ikon kaca pembesar */
+.search-container .fas.fa-search {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9aa0a6;
 }
 
 input[type="submit"] {
