@@ -1,0 +1,79 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* atau 100vh */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.header__links {
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    gap: 20px; /* memberi jarak antar link */
+    justify-content: center;
+}
+
+.header__links a{
+    color: black;
+    text-decoration: none;
+}
+
+.header__links a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 272px;
+    height: auto;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 500px;
+    padding: 12px 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 24px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+
+}
+
+input[type="text"]:focus {
+    border-color: #4285f4;
+    box-shadow: 0 1px 6px rgba(66, 133, 244, 0.5);
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+input[type="submit"]:hover {
+    border: 1px solid #dadce8;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
