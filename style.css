@@ -93,7 +93,7 @@ form {
     color: #9aa0a6;
 }
 
-input[type="submit"] {
+.submitbox {
     margin-top: 10px;
     margin-right: 10px;
     padding: 10px 20px;
@@ -104,7 +104,7 @@ input[type="submit"] {
     font-size: 14px;
 }
 
-input[type="submit"]:hover {
+.submitbox:hover {
     border: 1px solid #dadce8;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
