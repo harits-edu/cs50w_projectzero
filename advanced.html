@@ -20,6 +20,7 @@
                 display: flex;
                 gap: 20px;
             }
+
             .advanced-search {
                 display: flex;
                 flex-direction: column;
@@ -30,14 +31,15 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 10px;
-                width: 1000px;   
+                width: 1200px;   
             }
 
             .search-field label {
                 white-space: nowrap;
                 left: 30px;
+                text-align: left;
                 margin-right: 20px;
-                width: 300px;
+                width: 200px;
             }
 
             .search-field input[type="text"] {
@@ -48,6 +50,33 @@
 
             .search-button {
                 margin-top: 10px;
+            }
+
+            .search-field span {
+                font-size: 12px;
+                width: 400px;
+                text-align: left;
+                margin-left: 15px;
+            }
+
+            .todo {
+                position: absolute;
+                font-size: 14px;
+                font-weight: bold;
+                top: 130px;
+                right: 253px;
+                display: flex;
+                gap: 20px;
+            }
+
+            .find-pages {
+                position: absolute;
+                font-size: 16px;
+                font-weight: bold;
+                top: 130px;
+                left: 40px;
+                display: flex;
+                gap: 20px;
             }
 
         </style>
@@ -64,27 +93,41 @@
             <span>Advanced Search</span>
         </div>
 
-        <div class="advanced-search">
-            <div class="search-field">
-                <label for="all-words">Find pages with all these words:</label>
-                <input type="text" name="as_q" id="all-words" class="text-input">
-            </div>
-            <div class="search-field">
-                <label for="exact-phrase">Find pages with these exact word or phrase:</label>
-                <input type="text" name="as_epq" id="exact-phrase" class="text-input">
-            </div>
-            <div class="search-field">
-                <label for="any-words">Find pages with any of these words:</label>
-                <input type="text" name="as_oq" id="any_words" class="text-input">
-            </div>
-            <div class="search-field">
-                <label for="none-words">Find pages with none of these words:</label>
-                <input type="text" name="as_eq" id="none-words" class="text-input">
-            </div>
-             <div class="search-button">
-                <input type="submit" value="Advanced Search" class="blue-button">
-            </div>
+         <div class="todo">
+            <span>To do this in the search box.</span>
         </div>
+
+        <div class="find-pages">
+            <span>Find pages with...</span>
+        </div>
+
+        <form action="https://www.google.com/search" method="GET">
+            <div class="advanced-search">
+                <div class="search-field">
+                    <label for="all-words">All these words:</label>
+                    <input type="text" name="as_q" id="all-words" class="text-input">
+                    <span>Type the important words: tri-colour rat terrier</span>
+                </div>
+                <div class="search-field">
+                    <label for="exact-phrase">These exact word or phrase:</label>
+                    <input type="text" name="as_epq" id="exact-phrase" class="text-input">
+                    <span>Put exact words in quotes: "rat terrier"</span>
+                    </div>
+                <div class="search-field">
+                    <label for="any-words">Any of these words:</label>
+                    <input type="text" name="as_oq" id="any_words" class="text-input">
+                    <span>Type OR between all the words you want: miniature OR standard</span>
+                </div>
+                <div class="search-field">
+                    <label for="none-words">None of these words:</label>
+                    <input type="text" name="as_eq" id="none-words" class="text-input">
+                    <span>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</span>
+                </div>
+                <div class="search-button">
+                    <input type="submit" value="Advanced Search" class="blue-button">
+                </div>
+            </div>
+        </form>
 
     </body>
 
